@@ -1,0 +1,107 @@
+{
+    "info": {
+      "name": "School API Collection",
+      "description": "Postman Collection for testing School API endpoints (addSchool, getAllSchools, listSchools)",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Add School - Entry 1",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Greenwood High School\",\n  \"address\": \"10th Avenue, City Center\",\n  \"latitude\": 28.6139,\n  \"longitude\": 77.2090\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/api/schools/add",
+            "host": ["{{base_url}}"],
+            "path": ["api", "schools", "add"]
+          }
+        }
+      },
+      {
+        "name": "Add School - Entry 2",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Springfield Elementary\",\n  \"address\": \"25 Elm Street, Downtown\",\n  \"latitude\": 28.6140,\n  \"longitude\": 77.2100\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/api/schools/add",
+            "host": ["{{base_url}}"],
+            "path": ["api", "schools", "add"]
+          }
+        }
+      },
+      {
+        "name": "Add School - Entry 3",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Riverside Academy\",\n  \"address\": \"1 River Road, Suburbia\",\n  \"latitude\": 28.6200,\n  \"longitude\": 77.2000\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/api/schools/add",
+            "host": ["{{base_url}}"],
+            "path": ["api", "schools", "add"]
+          }
+        }
+      },
+      {
+        "name": "Get All Schools",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/schools/getAll",
+            "host": ["{{base_url}}"],
+            "path": ["api", "schools", "getAll"]
+          }
+        }
+      },
+      {
+        "name": "List Schools by Proximity",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/api/schools/list?latitude=28.6139&longitude=77.2090",
+            "host": ["{{base_url}}"],
+            "path": ["api", "schools", "list"],
+            "query": [
+              {
+                "key": "latitude",
+                "value": "28.6139"
+              },
+              {
+                "key": "longitude",
+                "value": "77.2090"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+  
