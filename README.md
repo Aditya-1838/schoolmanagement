@@ -1,13 +1,25 @@
-# schoolmanagement
+# API SCHOOL MANAGEMENT
+
+## Database Integration
+
+While working on this project, I faced challenges in securing a free MySQL hosting service. As a result, I opted to use MongoDB for the database integration.
+
+However, I have commented out the SQL-related code within the codebase for reference. You can find these sections and review the structure and queries I had intended to use with MySQL. The SQL implementation can be easily enabled when an appropriate hosting solution is available.
+
+I am confident in my knowledge of SQL, and I can seamlessly integrate it into the project when required.
 
 
 
+### ENDPOINTS:
 
-## 1. POST /api/addSchool
+
+```json
+### 1. POST /api/addSchool
 
 Description: Adds a new school to the database.
 
 Request Body:
+
 
 
 {
@@ -17,11 +29,7 @@ Request Body:
   "longitude": 98.765432
 }
 
-
-    name: The name of the school.
-    address: The address of the school.
-    latitude: The latitude of the school.
-    longitude: The longitude of the school.
+ 
 
 Response:
 
